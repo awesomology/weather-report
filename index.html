@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Checker</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* centers vertically */
+            align-items: center;      /* centers horizontally */
+            height: 100vh;           /* full screen height */
+            margin: 0;
+            background: #f5f5f5;      /* soft background */
+            font-family: Arial, sans-serif;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* centers children horizontally */
+            gap: 10px;           /* space between elements */
+        }
+
+        h1, h2 {
+            color: blue;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            outline: none;
+        }
+
+        input:focus {
+            border: 2px solid blue;
+        }
+
+        #searchBtn {
+            margin-top: 10px;
+            width: 200px;
+            height: 35px;
+            border: none;
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #searchBtn:hover {
+            background-color: darkblue;
+        }
+
+        img {
+            margin-top: 15px;
+        }
+</style>
+</head>
+<body>
+    <div>
+        <h1 id="welcome-txt"></h1>
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button id="searchBtn">Get Weather</button>
+
+        <h2 id="city-name"></h2>
+        <p id="temp"></p>
+        <img id="icon" />
+        <p id="currTime"></p>
+    </div>
+    <script src="./city_fetch.js"></script>
+</body>
+</html>
